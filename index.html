@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Spot</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <link rel="icon" type="image/png" href="f-images/logo-f.png" />
+  </head>
+
+  <body>
+    <div class="fix">
+      <nav>
+        <div class="logo">
+          <img src="f-images/logo-f.png" alt="" /> <i>..</i
+          ><span>FOOD</span> SPOT
+        </div>
+        <ul>
+          <li><a href="#h">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#abouts">About</a></li>
+          <li><a href="#app">Download the App</a></li>
+        </ul>
+        <div class="boxx">
+          <div class="cart-count">0</div>
+          <svg id="cart-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+          </svg>
+          
+        </div>
+
+        <div class="hamburger">&#9776;</div>
+      </nav>
+    </div>
+    
+    <div class="carts ">
+      <div class="cart-title">Cart Items</div>
+      <div class="cart-content">
+        
+      <!-- <div class="cart-box">
+        <img src="f-images/Paneer Tikka Pizza.jpeg" class="cart-img">
+        <div class="detail-box">
+          <div class="cart-food-title">Special Dosai</div>
+          <div class="price-box">
+            <div class="cart-price">Rs.72</div>
+             <div class="cart-amt">Rs.72</div>
+         </div>
+          <input type="number" value="1" class="cart-quantity">
+        </div>
+        <ion-icon name="trash" class="cart-remove"></ion-icon>
+      </div>
+
+      <div class="cart-box">
+        <img src="f-images/Six dumpling sauces.jpeg" class="cart-img">
+        <div class="detail-box">
+          <div class="cart-food-title">Special Dosai</div>
+          <div class="price-box">
+            <div class="cart-price">Rs.72</div>
+             <div class="cart-amt">Rs.72</div>
+         </div>
+          <input type="number" value="1" class="cart-quantity">
+        </div>
+        <ion-icon name="trash" class="cart-remove"></ion-icon>
+      </div> -->
+    
+      </div>
+
+      <div class="total">
+        <div class="total-title">Total</div>
+        <div class="total-price">Rs.0</div>
+      </div>
+
+      <button class="btn-buy" onclick="order()">Place Order</button>
+
+      <ion-icon name="close" id="cart-close"></ion-icon>
+    </div>
+  </div>
+
+    <div class="home" id="h">
+      <div class="h-left">
+        <span>Welcome to My Food Store</span>
+        <p>
+          Food is any substance consumed by an organism for nutritional support.
+          Food is usually of plant, animal, or fungal origin and contains
+          essential nutrients such as carbohydrates, fats, proteins, vitamins,
+          or minerals.
+        </p>
+        <button type="button">Explore Menu</button>
+      </div>
+      <div class="h-right">
+        <img src="f-images/hamburger-1238246_640 (1).jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="pr">
+      <h3>Our Products</h3>
+      <div class="product">
+        <div class="f-product">
+          <img src="f-images/momos.jpeg" alt="" />
+          <div class="p-text">
+            <p
+              style="
+                background-color: green;
+                border-radius: 8px;
+                padding: 5px;
+                width: fit-content;
+              "
+            >
+              VEGETARIAN
+            </p>
+            <p>Japanse Gyozas</p>
+            <ul>
+              <li>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"
+                    /></svg
+                ></span>
+                650 calories
+              </li>
+              <li>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M2.25 18 9 11.25l4.306 4.306a11.95 11.95 0 0 1 5.814-5.518l2.74-1.22m0 0-5.94-2.281m5.94 2.28-2.28 5.941"
+                    />
+                  </svg> </span
+                >NutriScore ® 74
+              </li>
+              <li>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                    />
+                  </svg> </span
+                >4.9 rating (537)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="f-product">
+          <img src="f-images/veg salat.jpeg" alt="" />
+          <div class="p-text">
+            <p
+              style="
+                background-color: greenyellow;
+                border-radius: 8px;
+                padding: 5px;
+                width: fit-content;
+              "
+            >
+              VEGAN MILK
+            </p>
+            <p>Avocado Salad</p>
+            <ul>
+              <li>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"
+                    /></svg></span
+                >680 calories
+              </li>
+              <li>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                    />
+                  </svg> </span
+                >NutriScore ® 54
+              </li>
+              <li>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                    />
+                  </svg> </span
+                >4.8 rating (637)
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="f-product">
+          <img src="f-images/Red Curry Chicken Wings.jpeg" alt="" />
+          <div class="p-text">
+            <p
+              style="
+                background-color: yellow;
+                border-radius: 8px;
+                padding: 5px;
+                width: fit-content;
+              "
+            >
+              VEGAN
+            </p>
+            <p>Thai Red Curry</p>
+            <ul>
+              <li>
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"
+                    />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"
+                    /></svg></span
+                >450 calories
+              </li>
+              <li>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                    />
+                  </svg> </span
+                >NutriScore ® 86
+              </li>
+              <li>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"
+                    />
+                  </svg> </span
+                >4.5 rating (457)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="how">
+      <h2 style="margin-top: 30px">How It's Work</h2>
+      <div class="work">
+        <div class="box">
+          <h4>Easy order</h4>
+          <svg
+            style="
+              background-color: #1abc9c;
+              padding: 8px;
+              border-radius: 50%;
+              box-shadow: 1px 1px 3px black;
+            "
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+            />
+          </svg>
+
+          <p>
+            Order food online from FreshMenu. Choose from a wide range of
+            cuisines and categories for food delivery.
+          </p>
+        </div>
+        <div class="box">
+          <h4>Best Quality</h4>
+          <svg
+            style="
+              background-color: #f1948a;
+              padding: 8px;
+              border-radius: 50%;
+              box-shadow: 1px 1px 3px black;
+            "
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M16.5 3.75V16.5L12 14.25 7.5 16.5V3.75m9 0H18A2.25 2.25 0 0 1 20.25 6v12A2.25 2.25 0 0 1 18 20.25H6A2.25 2.25 0 0 1 3.75 18V6A2.25 2.25 0 0 1 6 3.75h1.5m9 0h-9"
+            />
+          </svg>
+
+          <p>
+            Order and use the Food store to get free food delivery from your
+            nearby restaurants in Chennai.
+          </p>
+        </div>
+        <div class="box">
+          <h4>Fast Delivery</h4>
+          <svg
+            style="
+              background-color: #3949ab;
+              padding: 8px;
+              border-radius: 50%;
+              box-shadow: 1px 1px 3px black;
+            "
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
+            />
+          </svg>
+
+          <p>
+            Order Food Online From Restaurants Serving In Chennai From Food
+            store & Get 50% Off On First Order.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="about" id="abouts">
+      <div class="a-left">
+        <img src="f-images/hamburger-1238246_640 (1).jpg" alt="" />
+      </div>
+      <div class="a-right">
+        <h2>About Our Restaurant 200+</h2>
+        <h4>Our Delicious Food</h4>
+        <p>
+          Food delivery is a courier service in which a restaurant, store, or
+          independent food-delivery company delivers food to a customer. An
+          order is typically made either by telephone, through the supplier's
+          website or mobile app.
+        </p>
+        <button type="button">Explore Menu</button>
+      </div>
+    </div>
+    <div class="food" id="menu">
+      <ul>
+        <li style="color: #e91e63">All</li>
+        <li>Briyani</li>
+        <li>Chicken</li>
+        <li>Pizza</li>
+        <li>Burger</li>
+        <li>Pasta</li>
+      </ul>
+    </div>
+    <div class="all-foods">
+      <div class="fd">
+        <img class="food-img"
+          src="f-images/Buttermilk Fried Chicken.jpeg"
+          alt=""
+        />
+        <p>Food Restaurant | Chineese & Thai</p>
+        <br />
+        <span class="food-title">crispy chicken</span><br /><br><br>
+          <span class="food-price">Rs.150</span>
+          <button type="button"class="add-cart">Add to Cart</button>
+      </div>
+      <div class="fd">
+        <img class="food-img"
+          src="f-images/Thai Basil Chicken (Pad Kra Pao).jpeg"
+          alt=""
+        />
+        <p>Food Restaurant | Chineese & Thai</p>
+        <br />
+        <span class="food-title">porata</span><br /><br><br>
+          <span  class="food-price">Rs.35</span>
+          <button type="button" class="add-cart">Add to Cart</button>
+      </div>
+      <div class="fd">
+        <img  class="food-img" 
+        src="f-images/momos.jpeg" alt="" />
+        <p>Food Restaurant | Chineese & Thai</p>
+        <br />
+        <span class="food-title">chicken momos</span><br /><br><br>
+          <span class="food-price">Rs.230</span>
+          <button type="button" class="add-cart">Add to Cart</button>
+      </div>
+      <div class="fd">
+        <img class="food-img"
+          src="f-images/Thai Cashew Chicken Stir Fry.jpeg"
+          alt=""
+        />
+        <p>Food Restaurant | Chineese & Thai</p>
+        <br />
+        <span class="food-title">white pasta</span><br /><br><br>
+        
+          <span class="food-price">Rs.180</span>
+          <button type="button" class="add-cart">Add to Cart</button>
+        
+      </div>
+      <div class="fd">
+        <img  class="food-img"
+          src="f-images/Paneer Tikka Pizza.jpeg"
+          alt=""
+        />
+        <p>Food Restaurant | Chineese & Thai</p>
+        <br />
+        <span class="food-title">Veg pizza</span><br /><br><br>
+          <span class="food-price">Rs.150</span>
+          <button type="button" class="add-cart">Add to Cart</button>
+      </div>
+      <div class="fd">
+        <img class="food-img"
+          src="f-images/Six dumpling sauces.jpeg"
+          alt=""
+        />
+        <p>Food Restaurant | Chineese & Thai</p>
+        <br />
+        <span class="food-title">Momos</span><br /><br><br>
+          <span class="food-price">Rs.120</span>
+          <button type="button" class="add-cart">Add to Cart</button>
+      </div>
+      <div class="fd">
+        <img class="food-img"
+          src="f-images/Paneer Tikka Pizza.jpeg"
+          alt=""
+        />
+        <p>Food Restaurant | Chineese & Thai</p>
+        <br />
+        <span class="food-title">chicken pizza</span><br /><br><br>
+          <span class="food-price">Rs.350</span>
+          <button type="button" class="add-cart">Add to Cart</button>
+      </div>
+      <div class="fd">
+        <img class="food-img"
+          src="f-images/Sticky Thai Chicken Wings.jpeg"
+          alt=""
+        />
+        <p>Food Restaurant | Chineese & Thai</p>
+        <br />
+        <span class="food-title">chicken fry</span><br /><br><br>
+          <span class="food-price" >Rs.230</span>
+          <button type="button" class="add-cart">Add to Cart</button>
+        
+      </div>
+    </div>
+
+    <div class="question">
+      <h2>Frequently Asked Questions</h2>
+      <div class="de">
+        <details class="detial">
+          <summary>I got wrong food what shoud I do?</summary>
+          <div class="content">
+            <p>Order delicious fresh non-veg foods .</p>
+          </div>
+        </details>
+        <details class="detial">
+          <summary>I got wrong food what shoud I do?</summary>
+          <div class="content">
+            <p>Order delicious fresh non-veg foods .</p>
+          </div>
+        </details>
+        <details class="detial">
+          <summary>I got wrong food what shoud I do?</summary>
+          <div class="content">
+            <p>Order delicious fresh non-veg foods .</p>
+          </div>
+        </details>
+        <details class="detial">
+          <summary>I got wrong food what shoud I do?</summary>
+          <div class="content">
+            <p>Order delicious fresh non-veg foods .</p>
+          </div>
+        </details>
+      </div>
+    </div>
+    <div class="download" id="app">
+      <div class="d-left">
+        <img src="/Tasks/Task1/food-task/f-images/pngegg.png" alt="" />
+      </div>
+      <div class="d-right">
+        <h2>Download The Food Store App</h2>
+        <p>
+          Download the food store app: Currently, there is no dedicated
+          foodstore app available in all parts of India, so you can access the
+          platform through playstore.
+        </p>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="30"
+            height="30"
+            viewBox="0 0 48 48"
+          >
+            <linearGradient
+              id="AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1"
+              x1="18.102"
+              x2="25.297"
+              y1="3.244"
+              y2="34.74"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#35ab4a"></stop>
+              <stop offset=".297" stop-color="#31a145"></stop>
+              <stop offset=".798" stop-color="#288739"></stop>
+              <stop offset="1" stop-color="#237a33"></stop>
+            </linearGradient>
+            <path
+              fill="url(#AraffhWwwEqZfgFEBZFoqa_L1ws9zn2uD01_gr1)"
+              d="M13.488,4.012C10.794,2.508,7.605,3.778,6.45,6.323L24.126,24l9.014-9.014L13.488,4.012z"
+            ></path>
+            <linearGradient
+              id="AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2"
+              x1="19.158"
+              x2="21.194"
+              y1="23.862"
+              y2="66.931"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#f14e5d"></stop>
+              <stop offset=".499" stop-color="#ea3d4f"></stop>
+              <stop offset="1" stop-color="#e12138"></stop>
+            </linearGradient>
+            <path
+              fill="url(#AraffhWwwEqZfgFEBZFoqb_L1ws9zn2uD01_gr2)"
+              d="M33.14,33.014L24.126,24L6.45,41.677 c1.156,2.546,4.345,3.815,7.038,2.312L33.14,33.014z"
+            ></path>
+            <linearGradient
+              id="AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3"
+              x1="32.943"
+              x2="36.541"
+              y1="14.899"
+              y2="43.612"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#ffd844"></stop>
+              <stop offset=".519" stop-color="#ffc63f"></stop>
+              <stop offset="1" stop-color="#ffb03a"></stop>
+            </linearGradient>
+            <path
+              fill="url(#AraffhWwwEqZfgFEBZFoqc_L1ws9zn2uD01_gr3)"
+              d="M41.419,28.393 c1.72-0.96,2.58-2.676,2.581-4.393c-0.001-1.717-0.861-3.434-2.581-4.393l-8.279-4.621L24.126,24l9.014,9.014L41.419,28.393z"
+            ></path>
+            <linearGradient
+              id="AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4"
+              x1="13.853"
+              x2="15.572"
+              y1="5.901"
+              y2="42.811"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset=".003" stop-color="#0090e6"></stop>
+              <stop offset="1" stop-color="#0065a0"></stop>
+            </linearGradient>
+            <path
+              fill="url(#AraffhWwwEqZfgFEBZFoqd_L1ws9zn2uD01_gr4)"
+              d="M6.45,6.323C6.168,6.948,6,7.652,6,8.408 v31.179c0,0.761,0.164,1.463,0.45,2.09l17.674-17.68L6.45,6.323z"
+            ></path></svg
+          ><br />
+          GET IT ON Google Play
+        </div>
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="30"
+            height="30"
+            viewBox="0 0 48 48"
+          >
+            <path
+              fill="#0091ea"
+              d="M14.1,42h19.8c4.474,0,8.1-3.627,8.1-8.1V27H6v6.9C6,38.373,9.626,42,14.1,42z"
+            ></path>
+            <rect width="36" height="11" x="6" y="16" fill="#00b0ff"></rect>
+            <path
+              fill="#40c4ff"
+              d="M33.9,6H14.1C9.626,6,6,9.626,6,14.1V16h36v-1.9C42,9.626,38.374,6,33.9,6z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M22.854,18.943l1.738-2.967l-1.598-2.727c-0.418-0.715-1.337-0.954-2.052-0.536	c-0.715,0.418-0.955,1.337-0.536,2.052L22.854,18.943z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M26.786,12.714c-0.716-0.419-1.635-0.179-2.052,0.536L16.09,28h3.477l7.754-13.233	C27.74,14.052,27.5,13.133,26.786,12.714z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M34.521,32.92l-7.611-12.987l-0.763,1.303c-0.444,0.95-0.504,2.024-0.185,3.011l5.972,10.191	c0.279,0.476,0.78,0.741,1.295,0.741c0.257,0,0.519-0.066,0.757-0.206C34.701,34.554,34.94,33.635,34.521,32.92z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M25.473,27.919l-0.171-0.289c-0.148-0.224-0.312-0.434-0.498-0.621H12.3	c-0.829,0-1.5,0.665-1.5,1.484s0.671,1.484,1.5,1.484h13.394C25.888,29.324,25.835,28.595,25.473,27.919z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M16.66,32.961c-0.487-0.556-1.19-0.934-2.03-0.959l-0.004,0c-0.317-0.009-0.628,0.026-0.932,0.087	l-0.487,0.831c-0.419,0.715-0.179,1.634,0.536,2.053c0.238,0.14,0.5,0.206,0.757,0.206c0.515,0,1.017-0.266,1.295-0.741	L16.66,32.961z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M30.196,27.009H35.7c0.829,0,1.5,0.665,1.5,1.484s-0.671,1.484-1.5,1.484h-5.394	C30.112,29.324,30.01,27.196,30.196,27.009z"
+            ></path>
+          </svg>
+          <br />
+          Download on the App Store
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="abo">
+        <p>ABOUT</p>
+        <p>
+          Order Food Online From Restaurants Serving In Chennai From Food&
+          <br />
+          Get 50% Off On First Order. Get Food Delivered Within 30 Mins.
+        </p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="100"
+          height="100"
+          viewBox="0 0 48 48"
+        >
+          <path
+            fill="#03A9F4"
+            d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="100"
+          height="100"
+          viewBox="0 0 48 48"
+        >
+          <radialGradient
+            id="yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1"
+            cx="19.38"
+            cy="42.035"
+            r="44.899"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stop-color="#fd5"></stop>
+            <stop offset=".328" stop-color="#ff543f"></stop>
+            <stop offset=".348" stop-color="#fc5245"></stop>
+            <stop offset=".504" stop-color="#e64771"></stop>
+            <stop offset=".643" stop-color="#d53e91"></stop>
+            <stop offset=".761" stop-color="#cc39a4"></stop>
+            <stop offset=".841" stop-color="#c837ab"></stop>
+          </radialGradient>
+          <path
+            fill="url(#yOrnnhliCrdS2gy~4tD8ma_Xy10Jcu1L2Su_gr1)"
+            d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+          ></path>
+          <radialGradient
+            id="yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2"
+            cx="11.786"
+            cy="5.54"
+            r="29.813"
+            gradientTransform="matrix(1 0 0 .6663 0 1.849)"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stop-color="#4168c9"></stop>
+            <stop offset=".999" stop-color="#4168c9" stop-opacity="0"></stop>
+          </radialGradient>
+          <path
+            fill="url(#yOrnnhliCrdS2gy~4tD8mb_Xy10Jcu1L2Su_gr2)"
+            d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+          ></path>
+          <path
+            fill="#fff"
+            d="M24,31c-3.859,0-7-3.14-7-7s3.141-7,7-7s7,3.14,7,7S27.859,31,24,31z M24,19c-2.757,0-5,2.243-5,5	s2.243,5,5,5s5-2.243,5-5S26.757,19,24,19z"
+          ></path>
+          <circle cx="31.5" cy="16.5" r="1.5" fill="#fff"></circle>
+          <path
+            fill="#fff"
+            d="M30,37H18c-3.859,0-7-3.14-7-7V18c0-3.86,3.141-7,7-7h12c3.859,0,7,3.14,7,7v12	C37,33.86,33.859,37,30,37z M18,13c-2.757,0-5,2.243-5,5v12c0,2.757,2.243,5,5,5h12c2.757,0,5-2.243,5-5V18c0-2.757-2.243-5-5-5H18z"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="100"
+          height="100"
+          viewBox="0 0 48 48"
+        >
+          <path
+            fill="#039be5"
+            d="M24 5A19 19 0 1 0 24 43A19 19 0 1 0 24 5Z"
+          ></path>
+          <path
+            fill="#fff"
+            d="M26.572,29.036h4.917l0.772-4.995h-5.69v-2.73c0-2.075,0.678-3.915,2.619-3.915h3.119v-4.359c-0.548-0.074-1.707-0.236-3.897-0.236c-4.573,0-7.254,2.415-7.254,7.917v3.323h-4.701v4.995h4.701v13.729C22.089,42.905,23.032,43,24,43c0.875,0,1.729-0.08,2.572-0.194V29.036z"
+          ></path>
+        </svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="100"
+          height="100"
+          viewBox="0 0 48 48"
+        >
+          <linearGradient
+            id="s9~sBE_MLsUutFtX7i6Pra_KrtKMa6Fduil_gr1"
+            x1="20.601"
+            x2="27.399"
+            y1="4.721"
+            y2="43.279"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop offset="0" stop-color="#fede00"></stop>
+            <stop offset="1" stop-color="#ffd000"></stop>
+          </linearGradient>
+          <path
+            fill="url(#s9~sBE_MLsUutFtX7i6Pra_KrtKMa6Fduil_gr1)"
+            d="M34.017,41.99l-20,0.019c-4.4,0.004-8.003-3.592-8.008-7.992l-0.019-20	c-0.004-4.4,3.592-8.003,7.992-8.008l20-0.019c4.4-0.004,8.003,3.592,8.008,7.992l0.019,20	C42.014,38.383,38.417,41.986,34.017,41.99z"
+          ></path>
+          <path
+            d="M14.613,20.505c-0.168,0-0.342,0.039-0.503,0.12c-0.265,0.132-0.463,0.36-0.557,0.641	c-0.151,0.453,0.004,0.95,0.386,1.236l3.676,2.296l-0.143,0.382c-0.066,0.179-1.67,4.403-4.703,6.057	c-0.161,0.088-0.264,0.206-0.274,0.317c-0.011,0.112,0.078,0.213,0.155,0.277c0.656,0.549,1.334,0.939,2.685,1.187l0.409,0.075	l0.001,0.416c0.002,0.608,0.195,1.251,0.375,1.251c0.893,0,2.751,0,4.608,0.928c1.03,0.515,2.472,0.823,3.271,0.823	s2.241-0.308,3.271-0.823c1.856-0.928,3.715-0.928,4.608-0.928c0.181,0,0.374-0.643,0.375-1.251l0.001-0.416l0.409-0.075	c1.351-0.247,2.029-0.637,2.686-1.187c0.077-0.064,0.166-0.165,0.155-0.277c-0.011-0.111-0.114-0.229-0.274-0.317	c-3.032-1.654-4.636-5.878-4.703-6.057l-0.143-0.382l3.71-2.32c0.347-0.263,0.502-0.759,0.351-1.212	c-0.093-0.281-0.291-0.508-0.556-0.641c-0.264-0.133-0.564-0.153-0.846-0.06l-2.546,1.042V18.1c0-3.636-2.914-6.594-6.496-6.594	c-3.586,0-6.5,2.958-6.5,6.594v3.508l-2.576-1.053C14.828,20.522,14.722,20.505,14.613,20.505z"
+            opacity=".07"
+          ></path>
+          <path
+            fill="none"
+            stroke="#1d1d1b"
+            stroke-width="2"
+            d="M24,37.011c0.868,0,2.387-0.322,3.494-0.875 c1.751-0.875,3.509-0.875,4.384-0.875c0.875,0,0.875-1.751,0.875-1.751c1.391-0.254,2.156-0.658,2.917-1.295 c0.531-0.445,0.407-1.085-0.201-1.416c-2.903-1.583-4.474-5.793-4.474-5.793l3.364-2.104c0.554-0.415,0.779-1.138,0.561-1.795l0,0 c-0.281-0.843-1.193-1.298-2.035-1.016l-1.887,0.771V18.1c0-3.864-3.132-7.094-6.996-7.094h0h-0.004h0 c-3.864,0-6.996,3.23-6.996,7.094v2.763l-1.887-0.771c-0.843-0.282-1.754,0.173-2.035,1.016l0,0 c-0.219,0.656,0.007,1.379,0.561,1.795l3.364,2.104c0,0-1.57,4.209-4.474,5.793c-0.608,0.331-0.732,0.972-0.201,1.416 c0.76,0.637,1.526,1.041,2.917,1.295c0,0,0,1.751,0.875,1.751c0.875,0,2.633,0,4.384,0.875C21.613,36.689,23.132,37.011,24,37.011"
+            opacity=".05"
+          ></path>
+          <path
+            fill="none"
+            stroke="#000"
+            d="M24,37.011c0.868,0,2.387-0.322,3.494-0.875 c1.751-0.875,3.509-0.875,4.384-0.875c0.875,0,0.875-1.751,0.875-1.751c1.391-0.254,2.156-0.658,2.917-1.295 c0.531-0.445,0.407-1.085-0.201-1.416c-2.903-1.583-4.474-5.793-4.474-5.793l3.364-2.104c0.554-0.415,0.779-1.138,0.561-1.795l0,0 c-0.281-0.843-1.193-1.298-2.035-1.016l-1.887,0.771V18.1c0-3.864-3.132-7.094-6.996-7.094h0h-0.004h0 c-3.864,0-6.996,3.23-6.996,7.094v2.763l-1.887-0.771c-0.843-0.282-1.754,0.173-2.035,1.016l0,0 c-0.219,0.656,0.007,1.379,0.561,1.795l3.364,2.104c0,0-1.57,4.209-4.474,5.793c-0.608,0.331-0.732,0.972-0.201,1.416 c0.76,0.637,1.526,1.041,2.917,1.295c0,0,0,1.751,0.875,1.751c0.875,0,2.633,0,4.384,0.875C21.613,36.689,23.132,37.011,24,37.011"
+            opacity=".07"
+          ></path>
+          <path
+            fill="#fff"
+            d="M24,37.011c0.868,0,2.387-0.322,3.494-0.875c1.751-0.875,3.509-0.875,4.384-0.875	c0.875,0,0.875-1.751,0.875-1.751c1.391-0.254,2.156-0.658,2.917-1.295c0.531-0.445,0.407-1.085-0.201-1.416	c-2.903-1.583-4.474-5.793-4.474-5.793l3.364-2.104c0.554-0.415,0.779-1.138,0.561-1.795l0,0c-0.281-0.843-1.193-1.298-2.035-1.016	l-1.887,0.771V18.1c0-3.864-3.132-7.094-6.996-7.094h0h-0.004h0c-3.864,0-6.996,3.23-6.996,7.094v2.763l-1.887-0.771	c-0.843-0.282-1.754,0.173-2.035,1.016l0,0c-0.219,0.656,0.007,1.379,0.561,1.795l3.364,2.104c0,0-1.57,4.209-4.474,5.793	c-0.608,0.331-0.732,0.972-0.201,1.416c0.76,0.637,1.526,1.041,2.917,1.295c0,0,0,1.751,0.875,1.751c0.875,0,2.633,0,4.384,0.875	C21.613,36.689,23.132,37.011,24,37.011"
+          ></path>
+        </svg>
+      </div>
+      <div class="f">
+        <div class="f1">
+          <ul>
+            <li>Our Menu</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Menu</li>
+            <li>Order</li>
+            <li>Services</li>
+          </ul>
+        </div>
+        <div class="f1">
+          <ul>
+            <li>Get in touch</li>
+            <li>Account</li>
+            <li>Support Center</li>
+            <li>Feedback</li>
+            <li>Suggession</li>
+            <li>Item</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="c">
+      <p>Copyright © 2024 Design By Developer <i>VASIKARAN</i></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
