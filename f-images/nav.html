@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle Navbar</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      .navbar {
+        height: 60px;
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 20px;
+      }
+
+      .navbar-toggle {
+        cursor: pointer;
+        font-size: 24px;
+        margin-left: auto;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -30%;
+        height: 100%;
+        width: 30%;
+        background-color: #333;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        transition: right 0.3s ease;
+      }
+
+      .nav-link {
+        margin: 10px 0;
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+      }
+
+      @media screen and (max-width: 768px) {
+        .nav-links {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar-toggle" onclick="toggleNavbar()">&#9776;</div>
+      <div class="nav-links">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Services</a>
+        <a href="#" class="nav-link">Contact</a>
+      </div>
+    </div>
+
+    <script>
+      function toggleNavbar() {
+        var navLinks = document.querySelector(".nav-links");
+        navLinks.style.right =
+          navLinks.style.right === "0%" || navLinks.style.right === ""
+            ? "-30%"
+            : "0%";
+      }
+    </script>
+  </body>
+</html>
