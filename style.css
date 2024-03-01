@@ -21,7 +21,7 @@ body {
   margin-top: -10px;
   margin-left: -10px;
   padding-right: 10px;
-
+   z-index: 1000;
   box-shadow: 5px 0 20px grey;
 }
 
@@ -130,7 +130,7 @@ nav a:hover {
 
 .carts {
   position: fixed;
-  top: 0;
+  top: 80px;
   right: -100%;
   width: 600px;
   height: 100vh;
